@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroSmart+</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+    background-color: #c8e5f1; /* Dark background color */
+    color: #ffffff; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    }
+    .carousel-item {
+      height: 500px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-img-top {
+      object-fit: cover;
+      height: 160px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="text-center text-dark">AgroSmart+</h1>
+  <h3 class="text-center text-dark fw-bold">Grow Smart Farm Smart</h3>
+  <hr />
+  <div class="card bg-dark text-white border-0 mx-3">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/pixel.jpg') }}" class="d-block w-100" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Empowering Farmers to Grow Smarter, not Harder</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/farmer.jpg') }}" class="d-block w-100" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Farm with Confidence, Reap with Pride</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/farm.jpg') }}" class="d-block w-100" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Connecting Farmers, Cultivating Success</h3>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container my-3 py-3">
+    <h1 class="text-center text-dark">About Us</h1>
+    <hr />
+    <h5 class="text-center text-dark fw-bold">
+      AgroSmart+ is used to suggest some good ways to the farmers to manage their agricultural activities. This
+      AgroSmart+ helps farmers by providing them with easy access to essential information and different features to
+      optimise their farming practices and increase productivity.
+    </h5>
+
+    <h2 class="text-center text-dark py-4">Features</h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 mb-3 px-3">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/weather.png') }}" alt="">
+          <div class="card-body">
+           <a href="/weather"> <h5 class="card-title text-center text-dark ">Weather Forecast</h5></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3 px-3">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/recom.jpeg') }}" alt="">
+          <div class="card-body">
+           <a href="/"><h5 class="card-title text-center text-dark">Crop recommendation</h5></a> 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3 px-3">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/rice.jpeg') }}" alt="">
+          <div class="card-body">
+           <a href="/disease"> <h5 class="card-title text-center text-dark "> Rice Disease Prediction</h5></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3 px-3">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/cotton.jpg') }}" alt="">
+          <div class="card-body">
+           <a href="/cottondisease"><h5 class="card-title text-center text-dark">Cotton Disease Prediction</h5></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
